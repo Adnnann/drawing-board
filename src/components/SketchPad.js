@@ -2,39 +2,42 @@ import { Col, Row } from "react-bootstrap";
 
 function SketchPad(){
 
+let num = 10;
 let div = [];
-
-    for(let i=0;i<100;i++){
+let auto = "";
+    for(let i=1;i<=num*num;i++){
 
         // const div = document.createElement("div");
         // div.style.borderColor = "black";
-        div[i] = <div key={i} style={{borderColor:"black", borderStyle:"outset", backgroundColor:"red"}}>{i}</div>
+        div[i] = <div key={i} style={{ backgroundColor:"white",width:"min-width", borderStyle:"solid", height:"min-height"}}>.</div>
         // div[i] = div.appendChild(div);
         //<Row><div key={i} style={{borderStyle:"solid",backgroundColor:"red", float:"right"}}>Test</div></Row> 
-
         }
-            
-            
-            
+        for(let i=1;i<=num;i++){
+            auto += "auto "
+            }
+
+        
 
 
-
-
+console.log(auto)
 
 
     return(
-        <div className="container">
+        
+        <div style={{gridTemplateColumns:auto, width:"932px", display:"grid"}}>
             { 
                  div.map((item) => {
                     return(
           
-                        <Col style={{display:"grid"}}>{item}</Col>
+                        item
                                   
 
             
                     );
                 })
             }
+
         </div> 
     )
 }

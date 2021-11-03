@@ -1,6 +1,5 @@
 .container{
+  display:grid;
+  width: 732px;
   position:fixed;
-  width: 960px;
-  text-overflow:initial;
-  height: 700px;
 }
