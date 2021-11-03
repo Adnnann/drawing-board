@@ -25,7 +25,7 @@ console.log(auto)
 
     return(
         
-        <div style={{gridTemplateColumns:auto, width:"932px", display:"grid"}}>
+        <div style={{gridTemplateColumns:auto, width:"960px", display:"grid", marginLeft:"20%"}}>
             { 
                  div.map((item) => {
                     return(
