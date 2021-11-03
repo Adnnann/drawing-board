@@ -1,0 +1,6 @@
+.container{
+  position:fixed;
+  width: 960px;
+  text-overflow:initial;
+  height: 700px;
+}
