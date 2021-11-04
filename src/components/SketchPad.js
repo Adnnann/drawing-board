@@ -4,34 +4,54 @@ import '../index.css'
 
 function SketchPad(){
 
-const [num, setNum] = useState("");
+const [num, setNum] = useState(16);
+const [div, setDiv] = useState([]);
+let [auto, setAutoGen] = useState("");
 
 useEffect(()=>{
     setInitValue();
+    autoGen(num);
+    test(num);   
 },[])
 
-console.log(num)
 
-let div = [];
-let auto = "";
-let value = 16;
+
+//let div = [];
+//let auto = "";
+let value = 50;
 
 
 const setInitValue = () => {
     setNum(value);
 }
 
+const test = num => {
+    let test = [];
     for(let i=1;i<=num*num;i++){
-        div[i] = <div key={i} style={{ backgroundColor:"white", width:"100%", height:"100%", borderStyle:"solid"}}></div>
+        test[i] = <div key={i} style={{ backgroundColor:"white", width:"100%", height:"100%", borderStyle:"solid"}}></div>
+        setDiv([...div,test]);
     }
+    
+
+}
+
+let nesto = "";
+const autoGen = num =>{
     for(let i=1;i<=num;i++){
-        auto += "auto "
-    }
+        nesto += "auto ";
+       console.log(nesto)
+}
+setAutoGen(nesto);
+    
+}
 
 const resetBoard = () => {
-    setNum();
-    const num = window.prompt("Enter number between 16 and 100 to generate new pad")
-    setNum(num);
+    
+    const numDiv= window.prompt("Enter number between 16 and 100 to generate new pad")
+    //setNum(numDiv);
+    autoGen(numDiv);
+    test(numDiv);
+    // console.log(auto);
 }
 
     return(
