@@ -12,8 +12,8 @@ body {
 
 .app{
   display: grid;
-  max-width: 960px;
-  height: 220px;
+  max-width: 400px;
+  height: 400px;
   margin: auto;
 }
 
