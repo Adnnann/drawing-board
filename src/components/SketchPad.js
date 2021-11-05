@@ -57,7 +57,6 @@ const clearBoard = () => {
     document.querySelectorAll('.div').forEach(x=>x.style.backgroundColor = "white");
 }
 
-
     return(
        <div className="container" >
         <h3 style={{display:"inline"}}>Etch-A-Sketch</h3>
