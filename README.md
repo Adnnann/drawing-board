@@ -18,3 +18,7 @@ App is composed of only one component SketcPad.js
 ## Dependencies
 No additonal modules are required to use app.
 
+## Try on SandBox
+
+https://codesandbox.io/s/stoic-murdock-dcr5tn
+
